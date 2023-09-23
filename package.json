@@ -5,7 +5,7 @@
     "description": "A GitHub action centered on AWS Systems Manager Parameter Store GetParameters call, and placing the results into environment variables",
     "main": "lib/main.js",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --noEmit | npx loose-ts-check",
         "format": "prettier --write **/*.ts",
         "format-check": "prettier --check **/*.ts",
         "lint": "eslint src/**/*.ts",
