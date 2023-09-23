@@ -105,7 +105,6 @@ const processParameterPairChunk = (client, parameterPairChunk, withDecryption) =
     };
     const command = new client_ssm_1.GetParametersCommand(input);
     const response = yield client.send(command);
-    core_1.info(Object.values(response));
     if ((response === null || response === void 0 ? void 0 : response.Parameters) && response.Parameters.length > 0) {
         core_1.info(`Retrieved params`);
         for (const responseParameter of response.Parameters) {

@@ -55,7 +55,6 @@ const processParameterPairChunk = async (
     const command = new GetParametersCommand(input);
 
     const response = await client.send(command);
-    info(Object.values(response));
 
     if (response?.Parameters && response.Parameters.length > 0) {
         info(`Retrieved params`);
